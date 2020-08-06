@@ -137,7 +137,10 @@ BOOTSTRAP3 = {
 
 
 # Heroku settings
-if os.getcwd() == '/app':
+
+READY_TO_DEPLOY = True
+
+if READY_TO_DEPLOY:
     import dj_database_url
     DATABASES = {
     'default': dj_database_url.config(default='postgres://localhost')
