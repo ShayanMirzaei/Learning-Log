@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3e!f7l)c%b&ox(6cdeq(cs&+57lznooi23xt+a$p0k)l=k!%2)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['learning-log-24.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -148,10 +148,12 @@ if READY_TO_DEPLOY:
     # Honor the 'X-Forwarded-Proto' header for request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # Allow all host headers.
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['learning-log-24.herokuapp.com']
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+
+    DEBUG=False
     )
