@@ -155,5 +155,5 @@ if READY_TO_DEPLOY:
     STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 
-    DEBUG=False
+    DEBUG = False
     )
